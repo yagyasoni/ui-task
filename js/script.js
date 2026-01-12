@@ -208,17 +208,23 @@ function updatePurchaseUI() {
     const doubleOption = document.getElementById('doubleOption');
     const singleContent = document.getElementById('singleContent');
     const doubleContent = document.getElementById('doubleContent');
+    const singleButton = document.getElementById('radio-button1');
+    const doubleButton = document.getElementById('radio-button2');
 
     if (state.selectedPurchase === 'single') {
         singleOption.classList.add('active');
         doubleOption.classList.remove('active');
         singleContent.classList.add('active');
         doubleContent.classList.remove('active');
+        singleButton.classList.add('active');
+        doubleButton.classList.remove('active');
     } else {
         doubleOption.classList.add('active');
         singleOption.classList.remove('active');
         doubleContent.classList.add('active');
         singleContent.classList.remove('active');
+        doubleButton.classList.add('active');
+        singleButton.classList.remove('active');
     }
 
     updateCartLink();
